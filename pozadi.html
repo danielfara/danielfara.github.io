@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Střídající se pozadí</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh; /* Nastaví výšku na celou obrazovku */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      transition: background-color 1s ease; /* Plynulý přechod mezi barvami */
+    }
+  </style>
+</head>
+<body>
+  <h1>Barvy pozadí se mění každou sekundu!</h1>
+
+  <script>
+    // Pole s barvami, které se budou střídat
+    const colors = [
+      "#FF5733", // Červená
+      "#33FF57", // Zelená
+      "#3357FF", // Modrá
+      "#FF33A8", // Růžová
+      "#FFFF33", // Žlutá
+      "#FF8C33"  // Oranžová
+    ];
+
+    let currentIndex = 0;
+
+    // Funkce pro změnu barvy pozadí
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = colors[currentIndex];
+      currentIndex = (currentIndex + 1) % colors.length; // Když dojde na poslední barvu, začne znovu
+    }
+
+    // Změna barvy každou sekundu (1000 ms)
+    setInterval(changeBackgroundColor, 1000);
+  </script>
+</body>
+</html>
+
