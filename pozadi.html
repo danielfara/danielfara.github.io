@@ -1,46 +1,70 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Střídající se pozadsí</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh; /* Nastaví výšku na celou obrazovku */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      transition: background-color 1s ease; /* Plynulý přechod mezi barvami */
-    }
-  </style>
-</head>
-<body>
-  <h1>Barvy pozadí se mění každou sekundu!</h1>
+/* Resetování některých defaultních stylů */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <script>
-    // Pole s barvami, které se budou střídat
-    const colors = [
-      "#FF5733", // Červená
-      "#33FF57", // Zelená
-      "#3357FF", // Modrá
-      "#FF33A8", // Růžová
-      "#FFFF33", // Žlutá
-      "#FF8C33"  // Oranžová
-    ];
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-    let currentIndex = 0;
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
 
-    // Funkce pro změnu barvy pozadí
-    function changeBackgroundColor() {
-      document.body.style.backgroundColor = colors[currentIndex];
-      currentIndex = (currentIndex + 1) % colors.length; // Když dojde na poslední barvu, začne znovu
-    }
+header h1 {
+    font-size: 2rem;
+}
 
-    // Změna barvy každou sekundu (1000 ms)
-    setInterval(changeBackgroundColor, 1000);
-  </script>
-</body>
-</html>
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
 
