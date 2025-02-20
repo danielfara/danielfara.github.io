@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Střídající se pozadí</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh; /* Nastaví výšku na celou obrazovku */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      transition: background-color 1s ease; /* Plynulý přechod mezi barvami */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zvířata - Domů</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Barvy pozadí se mění každou sekundu!</h1>
+    <header>
+        <h1>Svět Zvířat</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="savci.html">Savci</a></li>
+                <li><a href="ptaci.html">Ptáci</a></li>
+                <li><a href="plazi.html">Plazi</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <script>
-    // Pole s barvami, které se budou střídat
-    const colors = [
-      "#FF5733", // Červená
-      "#33FF57", // Zelená
-      "#3357FF", // Modrá
-      "#FF33A8", // Růžová
-      "#FFFF33", // Žlutá
-      "#FF8C33"  // Oranžová
-    ];
+    <main>
+        <section>
+            <h2>Vítejte na stránkách o zvířatech!</h2>
+            <p>Na těchto stránkách se dozvíte vše o různých druzích zvířat, jejich vlastnostech a zajímavostech.</p>
+            <img src="images/animals-banner.jpg" alt="Zvířata" />
+        </section>
 
-    let currentIndex = 0;
+        <section>
+            <h3>Prozkoumejte kategorie:</h3>
+            <ul>
+                <li><a href="savci.html">Savci</a></li>
+                <li><a href="ptaci.html">Ptáci</a></li>
+                <li><a href="plazi.html">Plazi</a></li>
+            </ul>
+        </section>
+    </main>
 
-    // Funkce pro změnu barvy pozadí
-    function changeBackgroundColor() {
-      document.body.style.backgroundColor = colors[currentIndex];
-      currentIndex = (currentIndex + 1) % colors.length; // Když dojde na poslední barvu, začne znovu
-    }
-
-    // Změna barvy každou sekundu (1000 ms)
-    setInterval(changeBackgroundColor, 1000);
-  </script>
+    <footer>
+        <p>© 2025 Svět zvířat - Pouze pro studijní účely</p>
+    </footer>
 </body>
 </html>
+
 
