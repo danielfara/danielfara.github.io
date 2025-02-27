@@ -1,0 +1,71 @@
+/* Základní styl pro tělo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Hlavička a navigace */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hlavní sekce */
+main {
+    padding: 20px;
+}
+
+#intro, #about, #gallery {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Galerie */
+.gallery-images img {
+    width: 30%;
+    margin: 10px;
+}
+
+/* Patka */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Responzivní design pro mobilní zařízení */
+@media only screen and (max-width: 600px) {
+    .gallery-images img {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
